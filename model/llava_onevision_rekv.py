@@ -4,6 +4,7 @@ from logzero import logger
 
 from model.patch import patch_hf
 from model.abstract_rekv import Abstract_ReKV
+from model.llava_ov.patch_model import convert_llavaov_to_streaming
 
 
 class LlavaOneVision_ReKV(LlavaOnevisionForConditionalGeneration, Abstract_ReKV):
@@ -104,14 +105,93 @@ class LlavaOneVision_ReKV(LlavaOnevisionForConditionalGeneration, Abstract_ReKV)
         )
         
         return output
+    
+    def simple_forward(self, video, prompt):
+        user_content = [
+            {'type': "video"},
+            {"type": "text", "text": prompt}
+        ]
+        conversation = [
+            {
+                "role": "system",
+                "content": [
+                    {"type": "text", "text": "You are a helpful assistant."},
+                ],
+            },
+            {
+                "role": "user",
+                "content": user_content,
+            },
+        ]
+
+        prompt_text = self.processor.apply_chat_template(conversation, add_generation_prompt=True)
+
+        inputs = self.processor(
+            videos=[video],
+            text=prompt_text,
+            return_tensors="pt",
+        ).to(0, torch.float16)
+
+        output = self.generate(**inputs, max_new_tokens=1024, do_sample=False)
+        # response = self.processor.decode(output[0][2:], skip_special_tokens=True) 
+        # breakpoint()
+        # delete input_ids in output_ids
+        output_ids = output[0]
+        input_ids = inputs['input_ids']
+        output_ids = output_ids[input_ids.shape[1]:]
+        response = self.processor.decode(output_ids, skip_special_tokens=True)
+        return response
 
 
 def load_model(model_path='model_zoo/LLaVA/llava-onevision-qwen2-7b-ov-hf',
-               n_init=None, n_local=None, topk=64, chunk_size=1):
+               n_init=None, n_local=None, topk=64, chunk_size=1, use_hybrid_similarity=True, convert_to_streaming=False):
     device = 'cuda'
     n_frame_tokens = 196
-    processor = LlavaOnevisionProcessor.from_pretrained(model_path)
-    
+
+    # Detect checkpoints and LoRA adapters (parity with qwen2vl_rekv.py)
+    import os
+    import glob
+
+    original_model_path = model_path
+    processor_path = model_path
+    is_lora_model = False
+    base_model_path = None
+
+    if os.path.isdir(model_path):
+        checkpoint_dirs = glob.glob(os.path.join(model_path, 'checkpoint-*'))
+        if checkpoint_dirs:
+            latest_checkpoint = max(checkpoint_dirs, key=lambda x: int(x.split('-')[-1]))
+            print(f"检测到训练输出目录，使用最新检查点: {latest_checkpoint}")
+
+            adapter_config_path = os.path.join(latest_checkpoint, 'adapter_config.json')
+            if os.path.exists(adapter_config_path):
+                import json
+                with open(adapter_config_path, 'r') as f:
+                    adapter_config = json.load(f)
+                base_model_path = adapter_config.get('base_model_name_or_path', original_model_path)
+                is_lora_model = True
+                model_path = latest_checkpoint
+                processor_path = base_model_path
+                print(f"检测到LoRA模型，基础模型: {base_model_path}")
+            elif os.path.exists(os.path.join(latest_checkpoint, 'preprocessor_config.json')):
+                processor_path = latest_checkpoint
+                model_path = latest_checkpoint
+                print(f"使用检查点目录: {latest_checkpoint}")
+            else:
+                print("检查点目录缺少processor配置，使用默认基础模型")
+                processor_path = original_model_path
+                model_path = original_model_path
+
+    # Load processor with fallback
+    try:
+        processor = LlavaOnevisionProcessor.from_pretrained(processor_path)
+        print(f"成功从 {processor_path} 加载processor")
+    except Exception as e:
+        print(f"从 {processor_path} 加载processor失败: {e}")
+        processor_path = original_model_path
+        processor = LlavaOnevisionProcessor.from_pretrained(processor_path)
+        print(f"降级使用默认基础模型加载processor: {processor_path}")
+
     init_prompt = '<|im_start|>system \nYou are a helpful assistant.<|im_end|><|im_start|>user '
     init_prompt_ids = processor.tokenizer(init_prompt, return_tensors="pt").input_ids.to(device)
     inf_llm_config = {
@@ -124,20 +204,65 @@ def load_model(model_path='model_zoo/LLaVA/llava-onevision-qwen2-7b-ov-hf',
         'max_cached_block': 128,
         'exc_block_size': n_frame_tokens,
         'pin_memory': True,
+        'use_hybrid_similarity': use_hybrid_similarity,
     }
-    model = LlavaOneVision_ReKV.from_pretrained(
-        model_path, 
-        device_map="auto",
-        low_cpu_mem_usage=True, 
-        torch_dtype=torch.float16,
-        processor=processor,
-        n_frame_tokens=n_frame_tokens,
-        init_prompt_ids=init_prompt_ids,
-        n_local=n_local,
-        topk=topk,
-        chunk_size=chunk_size,
-    )
-    model.language_model = patch_hf(model.language_model, **inf_llm_config)
+
+    # Load model (base or LoRA)
+    if is_lora_model:
+        print(f"加载LoRA模型，基础模型: {base_model_path}, 适配器: {model_path}")
+        model = LlavaOneVision_ReKV.from_pretrained(
+            base_model_path,
+            device_map="auto",
+            low_cpu_mem_usage=True,
+            torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+            processor=processor,
+            n_frame_tokens=n_frame_tokens,
+            init_prompt_ids=init_prompt_ids,
+            n_local=n_local,
+            topk=topk,
+            chunk_size=chunk_size,
+        )
+        try:
+            from peft import PeftModel
+            model = PeftModel.from_pretrained(model, model_path)
+            # Merge LoRA weights to reduce runtime memory and remove adapter modules
+            try:
+                model = model.merge_and_unload()
+                print(f"成功合并LoRA权重并卸载适配器: {model_path}")
+            except Exception:
+                print(f"合并LoRA权重失败，保留适配器在线: {model_path}")
+            print(f"成功加载LoRA适配器: {model_path}")
+        except Exception as e:
+            print(f"加载LoRA适配器失败: {e}")
+            print("继续使用基础模型...")
+    else:
+        model = LlavaOneVision_ReKV.from_pretrained(
+            model_path,
+            device_map="auto",
+            low_cpu_mem_usage=True,
+            torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+            processor=processor,
+            n_frame_tokens=n_frame_tokens,
+            init_prompt_ids=init_prompt_ids,
+            n_local=n_local,
+            topk=topk,
+            chunk_size=chunk_size,
+            # attn_implementation='flash_attention_2'
+        )
+    # Patch language model with ReKV attention
+    if convert_to_streaming == 'true':
+        model = convert_llavaov_to_streaming(model)
+    elif convert_to_streaming == 'baseline':
+        pass
+    else:
+        # pass
+        model.language_model = patch_hf(model.language_model, **inf_llm_config)
+    # Expose ReKV config to the inner language model for cache construction
+    try:
+        if hasattr(model, 'language_model') and hasattr(model.language_model, 'model'):
+            model.language_model.model.rekv_config = inf_llm_config
+    except Exception:
+        logger.warning("Failed to attach rekv_config to language model; dynamic cache may use defaults.")
     
     for k, v in inf_llm_config.items():
         logger.info(f'{k}: {v}')

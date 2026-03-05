@@ -29,17 +29,34 @@ class VideoLlava_ReKV(VideoLlavaForConditionalGeneration, Abstract_ReKV):
         video_features = video_features.reshape(batch_size, frames * video_features.shape[1], -1)  # (B, Nv*257, D)
         return video_features
     
-    def _encode_video_chunk(self, video_chunk):
+    def _encode_video_chunk(self, video_chunk, video_id=None, chunk_idx=None):
+        """
+        编码视频chunk
+        
+        Args:
+            video_chunk: 视频数据
+            video_id: 视频标识符
+            chunk_idx: chunk索引
+        """
         pixel_values_videos = self.processor.video_processor(images=None, videos=video_chunk, return_tensors="pt").pixel_values_videos.to(self.device, self.dtype)  # (1, Nv, 3, H, W)
         video_features = self._get_video_features(pixel_values_videos)  # (1, Nv*257, D)
+        # Optional frame filter
+        if hasattr(self, 'frame_filter') and self.frame_filter is not None:
+            try:
+                video_features, _ = self.frame_filter.apply(video_features, self.n_frame_tokens)
+            except Exception as e:
+                logger.warning(f"frame_filter.apply failed, fallback to original features. Error: {e}")
         assert self.n_local >= video_features.shape[1], f'n_local: {self.n_local}, video_features: {video_features.shape[1]}'
 
         output = self.language_model(inputs_embeds=video_features, past_key_values=self.kv_cache, use_cache=True, return_dict=True)
         self.kv_cache = output.past_key_values
 
     @torch.inference_mode()
-    def encode_video(self, video, encode_chunk_size=8):  # video: (Nv, H, W, 3)
-        super().encode_video(video, encode_chunk_size)
+    def encode_video(self, video, encode_chunk_size=8, video_id=None):  # video: (Nv, H, W, 3)
+        """
+        编码完整视频，支持视频ID参数
+        """
+        super().encode_video(video, encode_chunk_size, video_id=video_id)
 
     @torch.inference_mode()
     def question_answering(self, input_text, max_new_tokens=128, retrieved_indices=None):

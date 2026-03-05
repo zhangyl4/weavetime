@@ -27,9 +27,23 @@ class LongVA_ReKV(LlavaQwenForCausalLM, Abstract_ReKV):
         video_features = video_features.flatten(0, 1).unsqueeze(0)  # (1, Nv*144, 3584)
         return video_features
 
-    def _encode_video_chunk(self, video_chunk):  # (Nv, H, W, 3)
+    def _encode_video_chunk(self, video_chunk, video_id=None, chunk_idx=None):  # (Nv, H, W, 3)
+        """
+        编码视频chunk
+        
+        Args:
+            video_chunk: 视频数据
+            video_id: 视频标识符  
+            chunk_idx: chunk索引
+        """
         pixel_values_videos = self.processor.preprocess(video_chunk, return_tensors="pt").pixel_values.to(self.device, self.dtype)  # (Nv, 3, H, W)
         video_features = self._get_video_features(pixel_values_videos)  # (1, Nv*144, D)
+        # Optional frame filter
+        if hasattr(self, 'frame_filter') and self.frame_filter is not None:
+            try:
+                video_features, _ = self.frame_filter.apply(video_features, self.n_frame_tokens)
+            except Exception as e:
+                logger.warning(f"frame_filter.apply failed, fallback to original features. Error: {e}")
         assert self.n_local >= video_features.shape[1], f'n_local: {self.n_local}, video_features: {video_features.shape[1]}'
 
         output = self.language_model(inputs_embeds=video_features, past_key_values=self.kv_cache, use_cache=True, return_dict=True)

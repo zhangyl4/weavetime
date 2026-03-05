@@ -7,6 +7,7 @@ import pandas as pd
 from multiprocessing.pool import Pool
 from tqdm import tqdm
 import openai
+import httpx
 
 
 def parse_args():
@@ -15,6 +16,7 @@ def parse_args():
     parser.add_argument("--output_dir", required=True, help="The path to save annotation json files.")
     parser.add_argument("--output_json", required=True, help="The path to save annotation final combined json file.")
     parser.add_argument("--num_tasks", default=16, type=int, help="Number of splits.")
+    parser.add_argument("--proxy_url", default="http://127.0.0.1:7895", help="Proxy URL for OpenAI API calls.")
     args = parser.parse_args()
     return args
 
@@ -35,13 +37,30 @@ def shrink_string_correctly(text):
     return " ".join(output)
 
 class GPTService:
-    def __init__(self):
-        self.model_name = "gpt-3.5-turbo-0613"
+    def __init__(self, proxy_url=None):
+        self.model_name = "gpt-4.1-mini"
         self.max_tokens = 300
-        self.client = openai.OpenAI(
-            base_url="",  # TODO
-            api_key="",  # TODO
-        )
+        
+        if proxy_url:
+            print(f"使用代理: {proxy_url}")
+            # 创建带代理的 HTTP 客户端
+            http_client = httpx.Client(
+                proxies={
+                    "http://": proxy_url,
+                    "https://": proxy_url
+                },
+                timeout=30.0
+            )
+            
+            self.client = openai.OpenAI(
+                api_key="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",
+                http_client=http_client
+            )
+        else:
+            print("直接连接 OpenAI API (无代理)")
+            self.client = openai.OpenAI(
+                api_key="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",
+            )
 
     def _gpt_response(self, user_prompt):
         completion = self.client.chat.completions.create(
@@ -55,17 +74,29 @@ class GPTService:
 
     def gpt_with_retry(self, prompt):
         retry = 10
-        for _ in range(retry):
+        for attempt in range(retry):
             try:
                 result = self._gpt_response(prompt)
                 if result is not None:
                     return result
+            except openai.APIConnectionError as e:
+                print(f"连接错误 (尝试 {attempt + 1}/{retry}): {e}")
+                print("请确保代理服务器正在运行并且端口配置正确")
+                time.sleep(2)
+            except openai.RateLimitError as e:
+                print(f"速率限制错误 (尝试 {attempt + 1}/{retry}): {e}")
+                time.sleep(5)
+            except openai.AuthenticationError as e:
+                print(f"认证错误: {e}")
+                print("请检查 API 密钥是否有效")
+                return None
             except Exception as e:
-                print(f"An error occurred: {e}")
-            time.sleep(1)
+                print(f"发生错误 (尝试 {attempt + 1}/{retry}): {e}")
+                time.sleep(1)
+        print(f"在 {retry} 次尝试后失败，跳过此请求")
         return None
 
-def annotate(prediction_set, caption_files, output_dir):
+def annotate(prediction_set, caption_files, output_dir, proxy_url=None):
     """
     Evaluates question and answer pairs using GPT-3
     Returns a score for correctness.
@@ -79,7 +110,7 @@ def annotate(prediction_set, caption_files, output_dir):
 
         try:
             # Compute the correctness score
-            gpt_service = GPTService()
+            gpt_service = GPTService(proxy_url=proxy_url)
             messages=[
                 {
                     "role": "system",
@@ -188,7 +219,7 @@ def main():
             # Split tasks into parts.
             part_len = len(incomplete_files) // num_tasks
             all_parts = [incomplete_files[i:i + part_len] for i in range(0, len(incomplete_files), part_len)]
-            task_args = [(prediction_set, part, args.output_dir) for part in all_parts]
+            task_args = [(prediction_set, part, args.output_dir, args.proxy_url) for part in all_parts]
 
             # Use a pool of workers to process the files in parallel.
             with Pool() as pool:

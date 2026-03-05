@@ -1,0 +1,11 @@
+--2025-09-11 20:34:02--  https://aistation2.shanghaitech.edu.cn:32206/api/istorage/v1/file/download?filePath=%2F2022233235%2F.cache%2Fhuggingface%2Fhub%2Fdatasets--Becomebright--QAEgo4D-MC-test%2Fsnapshots%2Fee31cc135035dad4d14c9c2d95bd7afca64d341c%2Ftest_mc.json
+Resolving aistation2.shanghaitech.edu.cn (aistation2.shanghaitech.edu.cn)... 10.15.171.204
+Connecting to aistation2.shanghaitech.edu.cn (aistation2.shanghaitech.edu.cn)|10.15.171.204|:32206... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/json]
+Saving to: 'download?filePath=%2F2022233235%2F.cache%2Fhuggingface%2Fhub%2Fdatasets--Becomebright--QAEgo4D-MC-test%2Fsnapshots%2Fee31cc135035dad4d14c9c2d95bd7afca64d341c%2Ftest_mc.json'
+
+                  download?filePath     [<=>                                                                ]       0  --.-KB/s               download?filePath=%2F2022233235%2F.     [ <=>                                                               ]     194  --.-KB/s    in 0s      
+
+2025-09-11 20:34:02 (46.8 MB/s) - 'download?filePath=%2F2022233235%2F.cache%2Fhuggingface%2Fhub%2Fdatasets--Becomebright--QAEgo4D-MC-test%2Fsnapshots%2Fee31cc135035dad4d14c9c2d95bd7afca64d341c%2Ftest_mc.json' saved [194]
+

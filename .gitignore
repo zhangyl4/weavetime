@@ -24,9 +24,7 @@ log*
 # Other
 .DS_Store
 .vscode
-data/*
-!data/.gitkeep
-model_zoo/*
-!model_zoo/.gitkeep
-results/*
-!results/.gitkeep
+data/*/videos
+results/
+tools/
+model_zoo/

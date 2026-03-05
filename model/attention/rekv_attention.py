@@ -12,6 +12,7 @@ def rekv_attention_forward(
     exc_block_size, fattn,
     async_global_stream=True,
     pin_memory=False,
+    use_hybrid_similarity=True,
     *args, **kwargs
 ):
     Attn, _ = get_multi_stage_dot_production_attention(fattn)
@@ -30,6 +31,13 @@ def rekv_attention_forward(
         len_k = key_value.size(1)
 
         assert use_cache
+
+        # Allow dynamic override per-call via attributes on the attention module
+        dyn_block_size = getattr(self, 'dynamic_block_size', block_size)
+        dyn_exc_block_size = getattr(self, 'dynamic_exc_block_size', exc_block_size)
+        if dyn_exc_block_size is None:
+            dyn_exc_block_size = exc_block_size
+        dyn_exc_block_size = min(n_local, dyn_exc_block_size)
 
         h_q = project_q(query)             # (batch, len_q, num_heads * dim_head)
         h_k = project_k(key_value)         # (batch, len_k, num_heads * dim_head)
@@ -52,11 +60,18 @@ def rekv_attention_forward(
             past_key_value = ContextManager(
                 position_bias,
                 n_init, n_local, 
-                block_size, max_cached_block, topk, chunk_size, exc_block_size,
+                dyn_block_size, max_cached_block, topk, chunk_size, dyn_exc_block_size,
                 fattn,
                 async_global_stream,
                 pin_memory,
+                use_hybrid_similarity,
             )
+        elif isinstance(past_key_value, ContextManager):
+            # Update dynamic block size for existing cache manager
+            past_key_value.set_block_size(int(dyn_block_size))
+            # Update similarity mode dynamically if provided
+            if hasattr(past_key_value, 'use_hybrid_similarity'):
+                past_key_value.use_hybrid_similarity = bool(use_hybrid_similarity)
 
         local_q, local_k, local_v = h_q, h_k, h_v
         global_q, global_k, global_v = h_q, h_k, h_v

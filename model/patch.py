@@ -42,7 +42,10 @@ def patch_hf(
 ):
     attn_kwargs.update(kwargs)
     # This approach lacks scalability and will be refactored.
-    from transformers import LlamaForCausalLM, MistralForCausalLM, Qwen2ForCausalLM, Qwen2Model
+    from transformers import LlamaForCausalLM, MistralForCausalLM, Qwen2ForCausalLM, Qwen2Model, Qwen2VLModel, Qwen2VLForConditionalGeneration
+    import sys
+    # sys.path.append("/root/videollm-online/ReKV")
+    from model.qwen2vl_rekv import Qwen2VL_ReKV
     from transformers.models.llama.modeling_llama import LlamaAttention, LlamaModel, BaseModelOutputWithPast
 
     def model_forward(
@@ -139,7 +142,7 @@ def patch_hf(
     elif isinstance(model, MistralForCausalLM):
         Attention = model.model.layers[0].self_attn.__class__
         Model = model.model.__class__
-    elif isinstance(model, Qwen2ForCausalLM) or isinstance(model, Qwen2Model):
+    elif isinstance(model, Qwen2ForCausalLM) or isinstance(model, Qwen2Model) or isinstance(model, Qwen2VL_ReKV):
         Attention = model.model.layers[0].self_attn.__class__
         Model = model.model.__class__
     elif model.__class__.__name__ == "MiniCPMForCausalLM":
@@ -149,6 +152,10 @@ def patch_hf(
         raise ValueError(f"Only supports llama, mistral and qwen2 models, not {model.__class__.__name__}.")
 
     hf_rope = model.model.layers[0].self_attn.rotary_emb 
+    if isinstance(model, Qwen2VL_ReKV):
+        from transformers.models.qwen2_vl.modeling_qwen2_vl import Qwen2RotaryEmbedding
+    else:
+        from transformers.models.qwen2.modeling_qwen2 import Qwen2RotaryEmbedding
     if isinstance(hf_rope, Qwen2RotaryEmbedding):
         base = hf_rope.base
         distance_scale = 1.0

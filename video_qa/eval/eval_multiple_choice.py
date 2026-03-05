@@ -4,6 +4,26 @@ import argparse
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+import ast
+import json
+def safe_parse_retrieval_data(value):
+    """安全解析retrieval数据"""
+    if pd.isna(value) or value == '' or value == '{}':
+        return {}
+    
+    if isinstance(value, dict):
+        return value
+    
+    if isinstance(value, str):
+        try:
+            return json.loads(value)
+        except (json.JSONDecodeError, ValueError):
+            try:
+                return ast.literal_eval(value)
+            except (ValueError, SyntaxError):
+                return {}
+    
+    return {}
 
 def calc_average_metric(results, save_dir, metric, vmin=None, vmax=None):
     if isinstance(results, list):
@@ -78,9 +98,20 @@ for metric in metrics:
 
 if 'pred_choice' in df.columns:
     n_errors = 0
+    total_response_time_s = 0
+    total_processing_fps = 0
+    total_question = 0
     for _, row in df.iterrows():
+        retrieval_info = safe_parse_retrieval_data(row['retrieval_info'])
+        response_time = retrieval_info['response_time_s']
+        processing_fps = retrieval_info['processing_fps']
+        total_response_time_s += response_time
+        total_processing_fps += processing_fps
+        total_question += 1
         if row['pred_answer'][0] not in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']:
             n_errors += 1
             if args.debug:
                 print(f'Video: {row["video_id"]}, Question: {row["question"]}, GT: {row["correct_choice"]}, Pred: {row["pred_answer"]}')
     print(f'%Errors: {n_errors / len(df) * 100:.2f}')
+    print(f'Average Response Time: {total_response_time_s / total_question:.4f} s')
+    print(f'Average Processing FPS: {total_processing_fps / total_question:.4f}')
