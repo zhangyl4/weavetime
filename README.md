@@ -11,8 +11,8 @@ WeaveTime is a streaming video question answering system that addresses the memo
 
 - [x] Environment Setup
 - [x] Training Code
-- [ ] Data Preparation
-- [ ] Model Weights
+- [x] Data Preparation
+- [x] Model Weights
 
 
 ## Project Structure (core code)
@@ -61,6 +61,68 @@ bash prepare.sh
 # Create conda environment for training
 bash livecc/env.sh
 ```
+
+
+## Data Preparation
+
+### 1. Download Original Videos
+
+Follow the instructions from [LLaVA-NeXT](https://github.com/LLaVA-Vi/LLaVA-NeXT) to download the original videos for each benchmark.
+
+### 2. Download JSON Files and Scripts
+
+Download the JSON files and processing scripts from ModelScope:
+
+```bash
+modelscope download --dataset zhangyl9/weavetime_it
+```
+
+This repository contains:
+- JSON annotation files for each benchmark
+- some tool script
+
+### 3. Extract Videos
+
+Use the provided script to unzip videos:
+
+```bash
+bash unzip_llava.sh
+```
+
+## Model Weights
+
+### 1. Download Base Model Weights
+
+#### LLaVA-OneVision (7B)
+```bash
+# Download from HuggingFace
+huggingface-cli download --resume-download llava-hf/llava-onevision-qwen2-7b-ov-hf
+
+```
+
+#### Qwen2-VL (7B)
+```bash
+# Download from HuggingFace
+huggingface-cli download --resume-download Qwen/Qwen2-VL-7B-Instruct
+
+```
+
+### 2. Download WeaveTime LoRA Weights
+
+Download the fine-tuned LoRA weights from ModelScope:
+
+#### LLaVA-OneVision WeaveTime LoRA
+```bash
+modelscope download --model zhangyl9/llavaov-weavetime
+```
+
+#### Qwen2-VL WeaveTime LoRA
+```bash
+# Coming soon - upload to ModelScope
+modelscope download --model zhangyl9/qwen2vl-weavetime
+```
+
+
 
 ## Inference
 
