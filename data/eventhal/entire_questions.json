@@ -1,0 +1,1568 @@
+[
+  {
+    "video_id": "entire_001",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_001.mp4",
+    "conversations": [
+      {
+        "question": "Is the man playing with the dog in the video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_002",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_002.mp4",
+    "conversations": [
+      {
+        "question": "Is the filmmaker playing with the bear in the video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_003",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_003.mp4",
+    "conversations": [
+      {
+        "question": "Is the bird drinking the coffee in the video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_004",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_004.mp4",
+    "conversations": [
+      {
+        "question": "Is the girl sitting on a bicycle and riding it in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_005",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_005.mp4",
+    "conversations": [
+      {
+        "question": "Is the girl sitting on a bicycle and riding it in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_006",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_006.mp4",
+    "conversations": [
+      {
+        "question": "Is the man sitting on a bicycle and riding it in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_007",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_007.mp4",
+    "conversations": [
+      {
+        "question": "Is the man sitting on a bicycle and riding it in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_008",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_008.mp4",
+    "conversations": [
+      {
+        "question": "Is the filmmaker playing with the cat in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      },
+      {
+        "question": "Is the cat enjoying the bath in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_009",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_009.mp4",
+    "conversations": [
+      {
+        "question": "Is the filmmaker playing with the cat in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      },
+      {
+        "question": "Is the cat enjoying the bath in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_010",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_010.mp4",
+    "conversations": [
+      {
+        "question": "Is the cat hunting the bird in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_011",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_011.mp4",
+    "conversations": [
+      {
+        "question": "Did the cat eventually get over the fense by jumping?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_012",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_012.mp4",
+    "conversations": [
+      {
+        "question": "Did the little cat eventually get to eat the cat food in the bowl in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_013",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_013.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_014",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_014.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_015",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_015.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_016",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_016.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_017",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_017.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_018",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_018.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_019",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_019.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_020",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_020.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_021",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_021.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_022",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_022.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_023",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_023.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_024",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_024.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_025",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_025.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_026",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_026.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_027",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_027.mp4",
+    "conversations": [
+      {
+        "question": "Are these two cats playing together?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_028",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_028.mp4",
+    "conversations": [
+      {
+        "question": "Is the cat playing with the dog?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_029",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_029.mp4",
+    "conversations": [
+      {
+        "question": "Is everything well organized in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_030",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_030.mp4",
+    "conversations": [
+      {
+        "question": "Is everything well organized in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_031",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_031.mp4",
+    "conversations": [
+      {
+        "question": "Is the man holding the toy bar in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_032",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_032.mp4",
+    "conversations": [
+      {
+        "question": "Is the dog playing with people around it in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_033",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_033.mp4",
+    "conversations": [
+      {
+        "question": "Are these two dogs playing with each other in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_034",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_034.mp4",
+    "conversations": [
+      {
+        "question": "Are these two dogs playing with each other in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_035",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_035.mp4",
+    "conversations": [
+      {
+        "question": "Are these two dogs playing with each other in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_036",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_036.mp4",
+    "conversations": [
+      {
+        "question": "Is the dog playing with the shrimp in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_037",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_037.mp4",
+    "conversations": [
+      {
+        "question": "Are these two dogs playing with each other in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_038",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_038.mp4",
+    "conversations": [
+      {
+        "question": "Are these dogs playing with each other in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_039",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_039.mp4",
+    "conversations": [
+      {
+        "question": "Are these two dogs playing with each other in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_040",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_040.mp4",
+    "conversations": [
+      {
+        "question": "Are these dogs playing with each other in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_041",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_041.mp4",
+    "conversations": [
+      {
+        "question": "Are these two dogs playing with each other in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_042",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_042.mp4",
+    "conversations": [
+      {
+        "question": "Are these dogs playing with each other in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_043",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_043.mp4",
+    "conversations": [
+      {
+        "question": "Are these two dogs playing with each other in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_044",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_044.mp4",
+    "conversations": [
+      {
+        "question": "Are these two dogs playing with each other in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_045",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_045.mp4",
+    "conversations": [
+      {
+        "question": "Is the dog playing with the person in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_046",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_046.mp4",
+    "conversations": [
+      {
+        "question": "Is the dog playing with the dear in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_047",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_047.mp4",
+    "conversations": [
+      {
+        "question": "Is the dog watching people playing billboards in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_048",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_048.mp4",
+    "conversations": [
+      {
+        "question": "Is the dog playing with the girl in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_049",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_049.mp4",
+    "conversations": [
+      {
+        "question": "Is the dog always lying in the cage with the blanket in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_050",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_050.mp4",
+    "conversations": [
+      {
+        "question": "Is the woman boiling spaghetti with the pot in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_051",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_051.mp4",
+    "conversations": [
+      {
+        "question": "Is the man only simply doing pull-ups in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      },
+      {
+        "question": "Is the man only simply eating food in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_052",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_052.mp4",
+    "conversations": [
+      {
+        "question": "Is the man only simply juggling in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      },
+      {
+        "question": "Is the man only simply eating apples in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_053",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_053.mp4",
+    "conversations": [
+      {
+        "question": "Is the elephant playing with the person in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_054",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_054.mp4",
+    "conversations": [
+      {
+        "question": "Is the cat playing with the person in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_055",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_055.mp4",
+    "conversations": [
+      {
+        "question": "Are the two riders in the video riding the bike normally?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_056",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_056.mp4",
+    "conversations": [
+      {
+        "question": "Did the person in the video come down from the upper bunk?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_057",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_057.mp4",
+    "conversations": [
+      {
+        "question": "Is the dog playing with the person in the video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_058",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_058.mp4",
+    "conversations": [
+      {
+        "question": "Is the man eating food while the goat next to him is watching him eating in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_059",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_059.mp4",
+    "conversations": [
+      {
+        "question": "Is the woman doing exercises with the barbell in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_060",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_060.mp4",
+    "conversations": [
+      {
+        "question": "Is the man doing exercises while sitting on the chair in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_061",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_061.mp4",
+    "conversations": [
+      {
+        "question": "Is the man doing exercises with the barbell in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_062",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_062.mp4",
+    "conversations": [
+      {
+        "question": "Are these people each working out on their own in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_063",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_063.mp4",
+    "conversations": [
+      {
+        "question": "Is the way the person in the video using the gym equipment correct?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_064",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_064.mp4",
+    "conversations": [
+      {
+        "question": "Is the way the person in the video using the gym equipment correct?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_065",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_065.mp4",
+    "conversations": [
+      {
+        "question": "Is the way the person in the video using the gym equipment correct?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_066",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_066.mp4",
+    "conversations": [
+      {
+        "question": "Are these two people each working out on their own in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_067",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_067.mp4",
+    "conversations": [
+      {
+        "question": "Are these two people each working out on their own in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_068",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_068.mp4",
+    "conversations": [
+      {
+        "question": "Are these two people each working out on their own in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_069",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_069.mp4",
+    "conversations": [
+      {
+        "question": "Are these two people each working out on their own in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_070",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_070.mp4",
+    "conversations": [
+      {
+        "question": "Are these two people each working out on their own in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_071",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_071.mp4",
+    "conversations": [
+      {
+        "question": "Is the man doing exercises in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_072",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_072.mp4",
+    "conversations": [
+      {
+        "question": "Is the man doing exercises in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_073",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_073.mp4",
+    "conversations": [
+      {
+        "question": "Is the person running on the treadmill and everything is normal in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_074",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_074.mp4",
+    "conversations": [
+      {
+        "question": "Is the way the person wearing a blue t-shirt in the video using the gym equipment correct?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_075",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_075.mp4",
+    "conversations": [
+      {
+        "question": "Are the people in the gym all doing exercises in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_076",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_076.mp4",
+    "conversations": [
+      {
+        "question": "Is the person playing with the dog in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_077",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_077.mp4",
+    "conversations": [
+      {
+        "question": "Is the man picking sunflowers in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_078",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_078.mp4",
+    "conversations": [
+      {
+        "question": "Did the dog keep walking in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_079",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_079.mp4",
+    "conversations": [
+      {
+        "question": "Is the girl playing with her dog in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_080",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_080.mp4",
+    "conversations": [
+      {
+        "question": "Is the filmmaker playing with her dog in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_081",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_081.mp4",
+    "conversations": [
+      {
+        "question": "Is the filmmaker playing with her dog in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_082",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_082.mp4",
+    "conversations": [
+      {
+        "question": "Is the person jumping down the stairs in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_083",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_083.mp4",
+    "conversations": [
+      {
+        "question": "Are the kangaroo and the eagle having fun in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_084",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_084.mp4",
+    "conversations": [
+      {
+        "question": "Are the man and the woman just eating noodles in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_085",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_085.mp4",
+    "conversations": [
+      {
+        "question": "Is this person counting money in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_086",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_086.mp4",
+    "conversations": [
+      {
+        "question": "Is the car in the traffic lane while pedestrians are on the crosswalk, waiting for them to pass in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_087",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_087.mp4",
+    "conversations": [
+      {
+        "question": "Did the person park the car in the parking space by driving in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_088",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_088.mp4",
+    "conversations": [
+      {
+        "question": "Is the person wearing a black t-shirt and shorts driving the white car in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_089",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_089.mp4",
+    "conversations": [
+      {
+        "question": "Is the sheep standing beside a car and watching it in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_090",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_090.mp4",
+    "conversations": [
+      {
+        "question": "Did the sheep keep running in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      },
+      {
+        "question": "Is the girl skateboarding in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_091",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_091.mp4",
+    "conversations": [
+      {
+        "question": "Is the girl doing exercises in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_092",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_092.mp4",
+    "conversations": [
+      {
+        "question": "Is the woman enjoying eating the food in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_093",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_093.mp4",
+    "conversations": [
+      {
+        "question": "Is the chef preparing the food correctly in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_094",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_094.mp4",
+    "conversations": [
+      {
+        "question": "Are the athletes currently engaged in a competition in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_095",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_095.mp4",
+    "conversations": [
+      {
+        "question": "Is the woman eating salad in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_096",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_096.mp4",
+    "conversations": [
+      {
+        "question": "Is this person using hands to hold the wooden board in this video?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_097",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_097.mp4",
+    "conversations": [
+      {
+        "question": "Are the people in the video engaging in normal and friendly interactions?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_098",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_098.mp4",
+    "conversations": [
+      {
+        "question": "Are the people in the video engaging in normal and friendly interactions?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_099",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_099.mp4",
+    "conversations": [
+      {
+        "question": "Are the people in the video engaging in normal and friendly interactions?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_100",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_100.mp4",
+    "conversations": [
+      {
+        "question": "Are the people in the video engaging in normal and friendly interactions?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_101",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_101.mp4",
+    "conversations": [
+      {
+        "question": "Are the people in the video engaging in normal and friendly interactions?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_102",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_102.mp4",
+    "conversations": [
+      {
+        "question": "Are the people in the video engaging in normal and friendly interactions?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_103",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_103.mp4",
+    "conversations": [
+      {
+        "question": "Are the people in the video engaging in normal and friendly interactions?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_104",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_104.mp4",
+    "conversations": [
+      {
+        "question": "Are the people in the video engaging in normal and friendly interactions?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_105",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_105.mp4",
+    "conversations": [
+      {
+        "question": "Are the people in the video engaging in normal and friendly interactions?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_106",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_106.mp4",
+    "conversations": [
+      {
+        "question": "Are the people in the video engaging in normal and friendly interactions?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_107",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_107.mp4",
+    "conversations": [
+      {
+        "question": "Are the people in the video engaging in normal and friendly interactions?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_108",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_108.mp4",
+    "conversations": [
+      {
+        "question": "Are the people in the video engaging in normal and friendly interactions?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "video_id": "entire_109",
+    "video_path": "/home/docker_shared/asus/zhangyl/model/huggingface/hub/EventHallusion/videos/entire/entire_109.mp4",
+    "conversations": [
+      {
+        "question": "Are the people in the video engaging in normal and friendly interactions?",
+        "choices": [
+          "Yes",
+          "No"
+        ],
+        "answer": "No"
+      }
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+{
+    "pretrained_model_name_or_path": "llava-hf/llava-onevision-qwen2-7b-ov-hf",
+    "output_dir": "outputs/llava_ov_lora",
+    "num_train_epochs": 3,
+    "per_device_train_batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "learning_rate": 2e-4,
+    "max_grad_norm": 0.3,
+    "warmup_ratio": 0.03,
+    "logging_steps": 1,
+    "save_strategy": "steps",
+    "save_steps": 500,
+    "evaluation_strategy": "no",
+    "fp16": true,
+    "bf16": false,
+    "torch_compile": false,
+    "optim": "paged_adamw_32bit",
+    "seed": 42,
+    "report_to": "wandb",
+    "dataloader_num_workers": 8,
+    "ddp_find_unused_parameters": false,
+    "remove_unused_columns": false,
+    "lora_r": 8,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "lora_modules": [
+        "q_proj",
+        "k_proj", 
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+    ],
+    "finetune_modules": [],
+    "freeze_modules": [
+        "visual_encoder",
+        "mm_projector"
+    ],
+    "annotation_paths": [
+        "/2022233235/videollm-online/livecc/streamingbench-formatted.jsonl"
+    ],
+    "initial_fps_frames": 8,
+    "streaming_fps_frames": 8,
+    "with_context": true,
+    "max_clip_frames": 300
+} 

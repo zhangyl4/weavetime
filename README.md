@@ -7,6 +7,14 @@ The official PyTorch implementation of "WeaveTime: Streaming from Earlier Frames
 WeaveTime is a streaming video question answering system that addresses the memory bottleneck in VideoLLMs by dynamically weaving earlier frame representations into an emergent memory through in-context KV-cache retrieval.
 
 
+## TODO
+
+- [x] Environment Setup
+- [x] Training Code
+- [ ] Data Preparation
+- [ ] Model Weights
+
+
 ## Project Structure (core code)
 
 ```
