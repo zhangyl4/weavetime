@@ -81,6 +81,8 @@ This repository contains:
 - JSON annotation files for each benchmark
 - some tool script
 
+You must modify them video origin parent path in json.
+
 ### 3. Extract Videos
 
 Use the provided script to unzip videos:
@@ -141,8 +143,10 @@ bash eval.sh
 
 ### Supported Benchmarks
 
+Referring download.sh to download video and soft link them in data/[ benchmark name ]/videos
+
 - StreamingBench
-- OVBench
+- OVOBench
 - MLVU
 - QA-EGO4D
 - EventHall
