@@ -1,3 +1,5 @@
+
+
 # WeaveTime
 
 The official PyTorch implementation of "WeaveTime: Streaming from Earlier Frames into Emergent Memory in VideoLLMs".
@@ -81,7 +83,7 @@ This repository contains:
 - JSON annotation files for each benchmark
 - some tool script
 
-You must modify them video origin parent path in json.
+You must modify the video origin parent path in the JSON files.
 
 ### 3. Extract Videos
 
